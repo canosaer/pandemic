@@ -1,0 +1,28 @@
+/* 
+==============================================
+CONTENT:	Project Name Here
+AUTHOR:		Eric Canosa
+==============================================
+
+TABLE OF CONTENTS:
+
+0. Initialization
+1. Appearance
+2. Utility
+
+==============================================
+*/
+
+/* 0. Initialization ========================= */
+@use 'reset';
+@use 'variables';
+@use 'mixins';
+
+/* 1. Appearance ============================= */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+
+/* 2. Utility ================================ */

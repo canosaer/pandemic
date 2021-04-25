@@ -17,3 +17,13 @@
     @content;
   }
 }
+
+@mixin light-font {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 300;
+}
+
+@mixin bold-font {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+}

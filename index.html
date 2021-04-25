@@ -7,15 +7,38 @@
 		<meta name="description" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="dist/css/main.css" />
 	</head>
 
 	<body>
 		<main class="display-grid">
-			<header class="top-row">
-				<img class="logo" href="#" target="_blank">
-				
-			</header>
+			<section class="intro">
+				<header class="top-row">
+					<a class="logo" href="#" target="_blank"></a>
+					<img class="search" src="src/img/magnifying-glass.svg" alt="search">
+					<div class="toggle">
+						<div class="toggle__line"></div>
+						<div class="toggle__line"></div>
+					</div>
+				</header>
+
+				<img class="game-box" src="src/img/game_box.png" alt="game box">
+				<h1 class="game-title">Pandemic</h1>
+				<div class="info-row">
+					<i class="info-row__age-icon fas fa-birthday-cake"></i>
+					<p class="info-row__player-ages">8+</p>
+					<i class="info-row__length-icon far fa-clock"></i>
+					<p class="info-row__game-length">45min.</p>
+					<i class="info-row__players-icon fas fa-users"></i>
+					<p class="info-row__num-players">2-4</p>
+				</div>
+
+
+
+			</section>
 		</main>
 
 		<script src="dist/js/main.js"></script>

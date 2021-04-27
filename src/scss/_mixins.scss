@@ -18,12 +18,22 @@
   }
 }
 
-@mixin light-font {
+@mixin body-font {
   font-family: 'Nunito', sans-serif;
   font-weight: 300;
 }
 
-@mixin bold-font {
-  font-family: 'Nunito', sans-serif;
-  font-weight: 700;
+@mixin heading-font {
+  font-family: 'Coda', cursive;
+  font-weight: 800;
+}
+
+@mixin object-center-cover{
+  object-fit: cover;
+	object-position: center;
+}
+
+@mixin background-center-cover{
+  object-fit: cover;
+	object-position: center;
 }

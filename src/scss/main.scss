@@ -24,5 +24,113 @@ TABLE OF CONTENTS:
 	box-sizing: border-box;
 }
 
+.display-grid{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-auto-rows: auto;
+	background: #033c7f;
+}
+
+.intro{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-auto-rows: auto;
+	background: url("../../src/img/hero.jpg");
+	background-blend-mode: multiply;
+	@include mixins.background-center-cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	&:after{
+		content: "";
+		position: absolute;
+		background: linear-gradient(rgba(3, 60, 127, 0), rgba(3, 60, 127, 1));
+		width: 100%;
+		height: 60%;
+		bottom: 0;
+	}
+}
+
+.top-row{
+	grid-column: 1/-1;
+	display: flex;
+	padding: 0.25rem 4rem;
+	align-items: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0.55));
+
+	&__title{
+		grid-row: 1/2;
+		font-size: 2rem;
+		@include mixins.heading-font;
+		text-transform: uppercase;
+		color: #f03f2d;
+		margin-left: 0.55rem;
+	}
+}
+
+.logo{
+	grid-row: 1/2;
+	background: url("../../src/img/logo.svg");
+	background-color: black;
+	background-position: center;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	height: 4rem;
+	width: 4rem;
+	border-radius: 9999px;
+}
+
+.search{
+	@include mixins.object-center-cover;
+	height: 1.75rem;
+	margin: 0 1.25rem 0 auto;
+	cursor: pointer;
+	// filter: invert(100%);
+}
+
+.menu{
+	display: none;
+}
+
+.toggle{
+	display: flex;
+	flex-direction: column;
+	width: 2.5rem;
+	height: 2.5rem;
+	cursor: pointer;
+
+	&__line{
+		width: 100%;
+		height: 0.2rem;
+		background: black;
+
+		&_1{
+			margin: auto;
+		}
+
+		&_2{
+			margin: auto;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+.hover-image{
+	display: none;
+}
+
+.game-spread{
+	display: none;
+}
+
+.gallery{
+	display: none;
+}
 
 /* 2. Utility ================================ */

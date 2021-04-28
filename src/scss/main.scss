@@ -37,8 +37,8 @@ TABLE OF CONTENTS:
 	grid-auto-rows: auto;
 	background: url("../../src/img/hero.jpg");
 	background-blend-mode: multiply;
-	@include mixins.background-center-cover;
-	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 	position: relative;
 
 	&:after{
@@ -81,11 +81,11 @@ TABLE OF CONTENTS:
 }
 
 .search{
-	@include mixins.object-center-cover;
+	object-fit: cover;
+	object-position: center;
 	height: 1.75rem;
 	margin: 0 1.25rem 0 auto;
 	cursor: pointer;
-	// filter: invert(100%);
 }
 
 .menu{

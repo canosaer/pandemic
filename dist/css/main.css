@@ -170,11 +170,8 @@ TABLE OF CONTENTS:
   grid-auto-rows: auto;
   background: url("../../src/img/hero.jpg");
   background-blend-mode: multiply;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
 }
 .intro:after {

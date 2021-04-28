@@ -153,6 +153,11 @@ TABLE OF CONTENTS:
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Coda", cursive;
+  font-weight: 400;
+}
+
 .display-grid {
   display: -ms-grid;
   display: grid;
@@ -173,6 +178,7 @@ TABLE OF CONTENTS:
   background-position: center;
   background-size: cover;
   position: relative;
+  z-index: 0;
 }
 .intro:after {
   content: "";
@@ -181,22 +187,35 @@ TABLE OF CONTENTS:
   width: 100%;
   height: 60%;
   bottom: 0;
+  z-index: -1;
+}
+.intro__game-box {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 26rem;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  margin-bottom: 1.25rem;
 }
 
 .top-row {
   grid-column: 1/-1;
   display: -webkit-flex;
   display: flex;
-  padding: 0.25rem 4rem;
+  padding: 0.55rem 4rem;
   -webkit-align-items: center;
           align-items: center;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), white);
+  background: linear-gradient(rgba(255, 255, 255, 0.55), white);
+  margin-bottom: 2rem;
 }
 .top-row__title {
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-family: "Coda", cursive;
   font-weight: 800;
   text-transform: uppercase;
@@ -213,8 +232,8 @@ TABLE OF CONTENTS:
   background-position: center;
   background-size: 70%;
   background-repeat: no-repeat;
-  height: 4rem;
-  width: 4rem;
+  height: 3rem;
+  width: 3rem;
   border-radius: 9999px;
 }
 
@@ -223,7 +242,7 @@ TABLE OF CONTENTS:
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  height: 1.75rem;
+  height: 1.5rem;
   margin: 0 1.25rem 0 auto;
   cursor: pointer;
 }
@@ -237,8 +256,8 @@ TABLE OF CONTENTS:
   display: flex;
   -webkit-flex-direction: column;
           flex-direction: column;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 }
 .toggle__line {
@@ -251,6 +270,29 @@ TABLE OF CONTENTS:
 }
 .toggle__line_2 {
   margin: auto;
+}
+
+.info-row {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+          justify-content: center;
+}
+.info-row__age-icon, .info-row__game-length-icon, .info-row__players-icon {
+  color: #f03f2d;
+  margin-right: 0.75rem;
+  font-size: 1.5rem;
+}
+.info-row__player-ages, .info-row__game-length, .info-row__num-players {
+  color: white;
+  margin-right: 1rem;
+  font-size: 1.5rem;
 }
 
 .hover-image {

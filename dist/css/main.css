@@ -193,7 +193,7 @@ TABLE OF CONTENTS:
   padding: 0.25rem 4rem;
   -webkit-align-items: center;
           align-items: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(255, 255, 255, 0.55));
+  background: linear-gradient(rgba(255, 255, 255, 0.9), white);
 }
 .top-row__title {
   -ms-grid-row: 1;

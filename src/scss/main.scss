@@ -283,11 +283,38 @@ body{
 	}
 
 	&__card{
-		object-fit: cover;
-		object-position: center;
+		width: 29%;
 		height: 8rem;
 		border-radius: 5%;
 		position: relative;
+		transition: all 425ms ease-in-out;
+		
+
+		&_card-back{
+			background: url(../../src/img/card_back.jpg), linear-gradient(45deg,rgba(255,255,255,0), rgba(255,255,255,0.25));
+			background-size: cover;
+			background-position: center;
+			background-blend-mode: hue;
+		}
+
+		&_quiet-night{
+			background: url(../../src/img/quiet_night.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+
+		&_resilient-population{
+			background: url(../../src/img/resilient_pop.jpg);
+			background-size: cover;
+			background-position: center;
+		}
+
+		&:hover{
+			transform: rotate(-5deg);
+			filter: brightness(105%);
+		}
+
+		
 	}
 }
 

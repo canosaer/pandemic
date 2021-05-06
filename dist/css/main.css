@@ -442,13 +442,33 @@ body {
           justify-content: space-between;
 }
 .events__card {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  width: 29%;
   height: 8rem;
   border-radius: 5%;
   position: relative;
+  transition: all 425ms ease-in-out;
+}
+.events__card_card-back {
+  background: url(../../src/img/card_back.jpg), linear-gradient(45deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25));
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: hue;
+}
+.events__card_quiet-night {
+  background: url(../../src/img/quiet_night.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.events__card_resilient-population {
+  background: url(../../src/img/resilient_pop.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.events__card:hover {
+  -webkit-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+  -webkit-filter: brightness(105%);
+          filter: brightness(105%);
 }
 
 .gallery {

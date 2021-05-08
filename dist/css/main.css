@@ -773,57 +773,73 @@ body {
   }
 }
 .gallery__item {
-  width: 100%;
-  height: 12rem;
-  -o-object-position: 20%;
-     object-position: 20%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: brightness(0.2);
-          filter: brightness(0.2);
-  transition: 200ms width ease-in-out, 200ms -webkit-filter ease-in-out;
-  transition: 200ms width ease-in-out, 200ms filter ease-in-out;
-  transition: 200ms width ease-in-out, 200ms filter ease-in-out, 200ms -webkit-filter ease-in-out;
+  height: 0;
+  padding-bottom: 20%;
+  position: relative;
+  transition: 200ms width ease-in-out, 200ms height ease-in-out;
+}
+.gallery__item:hover {
+  height: 35rem;
+}
+@media (min-width: 768px) {
+  .gallery__item:hover {
+    width: 80%;
+    height: 19rem;
+  }
+  .gallery__item:hover ~ div {
+    width: 5%;
+  }
 }
 @media (min-width: 768px) {
   .gallery__item {
-    height: 39rem;
     width: 5%;
+    padding-bottom: 42%;
   }
   .gallery__item_5 {
     width: 80%;
   }
 }
-.gallery__item_2 {
+.gallery__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-position: top;
+     object-position: top;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-filter: brightness(0.2);
+          filter: brightness(0.2);
+  transition: 200ms width ease-in-out, 200ms height ease-in-out, 200ms -webkit-filter ease-in-out;
+  transition: 200ms width ease-in-out, 200ms filter ease-in-out, 200ms height ease-in-out;
+  transition: 200ms width ease-in-out, 200ms filter ease-in-out, 200ms height ease-in-out, 200ms -webkit-filter ease-in-out;
+}
+.gallery__image_2 {
   -o-object-position: 70% 11%;
      object-position: 70% 11%;
 }
-.gallery__item_3 {
+.gallery__image_3 {
   -o-object-position: 70% 11%;
      object-position: 70% 11%;
 }
-.gallery__item_4 {
+.gallery__image_4 {
   -o-object-position: 25% 11%;
      object-position: 25% 11%;
 }
-.gallery__item_5 {
+.gallery__image_5 {
   -o-object-position: 25% 11%;
      object-position: 25% 11%;
-}
-.gallery__item:hover {
-  height: 35rem;
-  max-width: 100%;
-  -webkit-filter: brightness(1.1);
-          filter: brightness(1.1);
 }
 @media (min-width: 768px) {
-  .gallery__item:hover {
-    height: 39rem;
-    width: 80%;
+  .gallery__image {
+    -o-object-position: 20%;
+       object-position: 20%;
   }
-  .gallery__item:hover ~ img {
-    width: 5%;
-  }
+}
+.gallery__image:hover {
+  -webkit-filter: brightness(1.1);
+          filter: brightness(1.1);
 }
 
 .contact {

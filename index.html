@@ -16,22 +16,23 @@
 
 	<body>
 		<main class="display-grid">
-			<section class="intro">
+			<section class="intro" id="intro">
 				<header class="top-row">
 					<a class="logo logo_intro" href="https://www.zmangames.com/en/index/" target="_blank"></a>
 					<h1 class="top-row__title">Pandemic</h1>
 					<img class="search" src="src/img/magnifying-glass.svg" alt="search">
-					<div class="toggle">
+					<label class="toggle" for="toggle__checkbox">
 						<div class="toggle__line toggle__line_1"></div>
 						<div class="toggle__line toggle__line_2"></div>
-					</div>
+					</label>
+					<input type="checkbox" id="toggle__checkbox" class="toggle__checkbox hidden">
 					<div class="menu">
 						<ul class="menu__list">
-							<li class="menu__item"><a class="menu__link" href="#">Intro</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Gallery</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Learn to Play</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Downloads</a></li>
-							<li class="menu__item"><a class="menu__link" href="#">Contact</a></li>
+							<li class="menu__item"><a class="menu__link" href="#intro">Intro</a></li>
+							<li class="menu__item"><a class="menu__link" href="#about">About</a></li>
+							<!-- <li class="menu__item"><a class="menu__link" href="#">Learn to Play</a></li>
+							<li class="menu__item"><a class="menu__link" href="#">Downloads</a></li> -->
+							<li class="menu__item"><a class="menu__link" href="#gallery">Gallery</a></li>
 						</ul>
 					</div>
 				</header>
@@ -96,7 +97,7 @@
 			<div class="hover-image"></div>
 			<!-- Go from dark filter to brighter on hover -->
 
-			<section class="hook">
+			<section class="hook" id="about">
 				<p class="hook__text">As skilled members of a disease-fighting team, you and the other players work together to keep the world safe from outbreaks and epidemics. Only through teamwork will you have a chance to find a cure.</p>
 				<p class="hook__text">Pandemic is a cooperative board game in which players work as a team to treat infections around the world while gathering resources for cures. First published in 2007, the game's unique combination of cooperative gameplay, engrossing premise, and compelling design have proved a hit with everyone from hardcore gamers to casual players. The Pandemic game line now includes multiple expansions and stand-alone titles.</p>
 			</section>
@@ -131,7 +132,7 @@
 			</section>
 			<!-- create sheen in top right corner, tip cards left on hover and change sheen to mimic reflection of light -->
 
-			<section class="gallery">
+			<section class="gallery" id="gallery">
 				<img class="gallery__item gallery__item_1" src="src/img/legacy1.png" loading="lazy" alt="box art 1">
 				<img class="gallery__item gallery__item_2" src="src/img/legacy2.jpg" loading="lazy" alt="box art 2">
 				<img class="gallery__item gallery__item_3" src="src/img/legacy3.png" loading="lazy" alt="box art 3">
@@ -191,7 +192,7 @@
 			</section> -->
 			<!-- magnify and background color change on buttons -->
 
-			<section class="contact">
+			<section class="contact" id="contact">
 				<a class="logo logo_contact" href="https://www.zmangames.com/en/index/" target="_blank"></a>
 				<div class="contact__text">
 					<h2 class="contact__name">Z-Man Games</h2>

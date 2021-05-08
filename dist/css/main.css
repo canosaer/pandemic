@@ -299,6 +299,7 @@ body {
   background: linear-gradient(rgba(255, 255, 255, 0.55), white);
   margin-bottom: 2rem;
   z-index: 2;
+  position: relative;
 }
 .top-row__title {
   -ms-grid-row: 1;
@@ -348,7 +349,36 @@ body {
 }
 
 .menu {
-  display: none;
+  position: absolute;
+  width: 0rem;
+  opacity: 0;
+  background: #033c7f;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  grid-auto-rows: auto;
+  padding: 4rem 3.7rem 0 0;
+  -webkit-justify-content: right;
+          justify-content: right;
+  transition: width 200ms ease-in-out;
+}
+.menu__item {
+  padding: 1rem 0rem;
+  text-transform: uppercase;
+  text-align: right;
+}
+.menu__link {
+  padding: 0.3rem;
+  text-decoration: none;
+  color: #f03f2d;
+  font-size: 1.75rem;
+}
+
+.toggle__checkbox:checked ~ .menu {
+  width: 20.6rem;
+  opacity: 1;
 }
 
 .toggle {
@@ -359,6 +389,7 @@ body {
   width: 2rem;
   height: 2rem;
   cursor: pointer;
+  z-index: 1;
 }
 .toggle__line {
   width: 100%;
@@ -370,6 +401,9 @@ body {
 }
 .toggle__line_2 {
   margin: auto;
+}
+.toggle__checkbox {
+  display: none;
 }
 
 .info-row {
@@ -665,4 +699,7 @@ body {
 }
 
 /* 2. Utility ================================ */
+.hidden {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

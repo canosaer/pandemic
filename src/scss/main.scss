@@ -73,6 +73,15 @@ body{
 		grid-column: 3/4;
 		margin-bottom: 1.25rem;
 		z-index: 1;
+
+		@include mixins.landscape{
+			width: 100%;
+			grid-column: 1/2;
+			grid-row: 2/3;
+			justify-self: right;
+			margin: unset;
+			margin: 0 0 -5rem 20%;
+		}
 	}
 
 	&__shimmer-base{
@@ -83,6 +92,10 @@ body{
 		top: 4rem;
 
 		background: rgba(255,255,255, 0.75);
+
+		@include mixins.landscape{
+			height: 89%;
+		}
 	}
 
 	// &__shimmer-1, &__shimmer-2, &__shimmer-3, &__shimmer-4, &__shimmer-5, &__shimmer-6, &__shimmer-7, &__shimmer-8{
@@ -134,6 +147,10 @@ body{
 		text-transform: uppercase;
 		color: #f03f2d;
 		margin-left: 0.55rem;
+	}
+
+	@include mixins.landscape{
+		margin-bottom: 25rem;
 	}
 }
 
@@ -244,6 +261,25 @@ body{
 		font-size: 1.5rem;
 	}
 
+	@include mixins.landscape{
+		position: relative;
+		grid-column: 2/4;
+		justify-self: left;
+		margin-bottom: 4rem;
+
+		&::before{
+			position: absolute;
+			content: "Pandemic";
+			@include mixins.heading-font;
+			text-transform: uppercase;
+			color: #f03f2d;
+			top: -3.25rem;
+			font-size: 3rem;
+			left: 45%;
+			transform: translate(-50%);
+		}
+	}
+
 	
 }
 
@@ -251,6 +287,10 @@ body{
 	display: grid;
 	grid-template-columns: 0.2fr 1fr 0.2fr;
 	grid-auto-rows: auto;
+
+	@include mixins.landscape{
+		grid-template-columns: 0.3fr 1fr 0.3fr;
+	}
 
 	&__heading{
 		grid-column: 2/3;
@@ -287,23 +327,37 @@ body{
 
 }
 
-.hover-image{
-	place-self: center center;
-	width: 80%;
-	height: 20rem;
-	background-size: cover;
-	background-position: center;
-	// filter: brightness(.8);
-	background-image: url("../../src/img/hover_photo.jpg");
-	background-color: rgba(0,0,0,0.35);
-	background-blend-mode: hard-light;
-	transition: background-color 400ms ease-in-out;
-	margin-top: 4rem;
+.hover-section{
 
-	&:hover{
-		background-color: rgba(0,0,0,0.1);
+	width: 80%;
+	padding-bottom: 45%;
+  	position: relative;
+	margin: 4rem auto 0rem;
+
+	@include mixins.landscape{
+		width: 60%;
+		padding-bottom: 33%;
 	}
+	
+	&__image{
+		background-size: cover;
+		background-position: center;
+		// filter: brightness(.8);
+		background-image: url("../../src/img/hover_photo.jpg");
+		background-color: rgba(0,0,0,0.35);
+		background-blend-mode: hard-light;
+		transition: background-color 400ms ease-in-out;
+		position: absolute;
+  		top: 0; left: 0;
+  		width: 100%; height: 100%;
+	
+		&:hover{
+			background-color: rgba(0,0,0,0.1);
+		}
+	}
+
 }
+	
 
 .hook{
 	border: 7px double variables.$red;
@@ -311,6 +365,11 @@ body{
 	width: 80%;
 	@include mixins.copy;
 	padding: 1.5rem 1.5rem 0;
+
+	@include mixins.landscape{
+		width: 60%;
+		margin-bottom: 8rem;
+	}
 
 	&__text{
 		padding-bottom: 1.5rem;
@@ -371,6 +430,8 @@ body{
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-auto-rows: auto;
+	padding: 0 21.75% 0 19%;
+
 
 	&__card-display{
 		grid-column: 2/4;
@@ -378,6 +439,15 @@ body{
 		justify-content: space-between;
 		// margin-bottom: 4rem;
 		margin-bottom: 1rem;
+		align-self: center;
+		// margin-bottom: 33%;
+
+		@include mixins.landscape{
+			grid-column: 3/-1;
+			grid-row: 1/3;
+			// margin-top: 10%;
+			margin-bottom: 33%;
+		}
 	}
 
 	&__card-slot{
@@ -386,6 +456,22 @@ body{
   		position: relative;
 		flex:1;
 		margin: 0.5rem;
+
+		@include mixins.landscape{
+			&_resilient-population{
+				transform: scale(1.5);
+			}
+
+			&_quiet-night{
+				transform: scale(1.3);
+				filter: blur(0.05rem)
+			}
+
+			&_card-back{
+				transform: scale(1.1);
+				filter: blur(0.1rem)
+			}
+		}
 	}
 
 	&__card{
@@ -430,6 +516,13 @@ body{
 		line-height: 1.4;
 		text-align: center;
 		padding-bottom: 0.75rem;
+		place-self: end;
+
+		@include mixins.landscape{
+			grid-column: 1/3;
+			width: 100%;
+			padding: 3%;
+		}
 	}
 
 	&__text{
@@ -437,32 +530,70 @@ body{
 		grid-column: 2/4;
 		text-align: center;
 		line-height: 1.5;
-		margin-bottom: 4rem;
+		margin-bottom: 33%;
+
+		@include mixins.landscape{
+			grid-column: 1/3;
+			padding: 3%;
+		}
 	}
 }
 
 .gallery{
-	display: grid;
-	grid-template-columns: repeat(5, 1fr);
-	grid-auto-rows: auto;
+	display: flex;
+	flex-direction: column;
+
+	@include mixins.landscape{
+		flex-direction: row;
+	}
 
 	&__item{
 		width: 100%;
 		height: 12rem;
-		object-position: top center;
+		object-position: 20%;
 		object-fit: cover;
-		grid-column: 1/-1;
 		filter: brightness(0.2);
-		transition: 200ms height ease-in-out, 200ms filter ease-in-out;
+		transition: 200ms width ease-in-out, 200ms filter ease-in-out;
 
-		&_2, &_3, &_4, &_5{
-			object-position: center 11%;
+		@include mixins.landscape{
+			height: 39rem;
+			width: 5%;
+
+			&_5{
+				width: 80%;
+			}
+		}
+
+		&_2{
+			object-position: 70% 11%;
+		}
+
+		&_3{
+			object-position: 70% 11%;
+		}
+
+		&_4{
+			object-position: 25% 11%;
+		}
+		
+		&_5{
+			object-position: 25% 11%;
+	
 		}
 
 		&:hover{
 			height: 35rem;
 			max-width: 100%;
 			filter: brightness(1.1);
+
+			@include mixins.landscape{
+				height: 39rem;
+				width: 80%;
+
+				& ~ img{
+					width: 5%;
+				}
+			}
 		}
 
 	}

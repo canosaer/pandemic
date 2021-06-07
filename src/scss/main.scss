@@ -208,12 +208,17 @@ body{
 		font-size: 1.75rem;
 	}
 
+	&_open{
+		width: 20.6rem;
+		opacity: 1;
+	}
+
 }
 
-.toggle__checkbox:checked ~ .menu {
-	width: 20.6rem;
-	opacity: 1;
-  }
+// .toggle__checkbox:checked ~ .menu {
+// 	width: 20.6rem;
+// 	opacity: 1;
+//   }
 
 .toggle{
 	display: flex;
@@ -221,12 +226,14 @@ body{
 	width: 2rem;
 	height: 2rem;
 	cursor: pointer;
-	z-index: 1;
+	z-index: 4;
+	position: relative;
 
 	&__line{
 		width: 100%;
 		height: 0.2rem;
 		background: black;
+		transition: all 200ms ease-in-out;
 
 		&_1{
 			margin: auto;
@@ -234,6 +241,22 @@ body{
 
 		&_2{
 			margin: auto;
+		}
+
+		&_open-1{
+			background: #f03f2d;
+			transform: rotate(45deg);
+			position: absolute;
+			top: 1rem;
+			right: 0;
+		}
+
+		&_open-2{
+			background: #f03f2d;
+			transform:rotate(-45deg);
+			position: absolute;
+			top: 1rem;
+			right: 0;
 		}
 	}
 	&__checkbox{
@@ -307,6 +330,8 @@ body{
 		grid-column: 2/3;
 		// padding-bottom: 5rem;
 		@include mixins.copy;
+		max-width: 990px;
+		place-self: center center;
 	}
 }
 
@@ -330,6 +355,7 @@ body{
 .hover-section{
 
 	width: 80%;
+	max-width: 950px;
 	padding-bottom: 45%;
   	position: relative;
 	margin: 4rem auto 0rem;
@@ -363,6 +389,7 @@ body{
 	border: 7px double variables.$red;
 	margin: 4rem auto;
 	width: 80%;
+	max-width: 950px;
 	@include mixins.copy;
 	padding: 1.5rem 1.5rem 0;
 
@@ -434,7 +461,7 @@ body{
 
 
 	&__card-display{
-		grid-column: 2/4;
+		grid-column: 1/-1;
 		display: flex;
 		justify-content: space-between;
 		// margin-bottom: 4rem;
@@ -447,6 +474,7 @@ body{
 			grid-row: 1/3;
 			// margin-top: 10%;
 			margin-bottom: 33%;
+			max-width: 500px;
 		}
 	}
 
@@ -522,6 +550,7 @@ body{
 			grid-column: 1/3;
 			width: 100%;
 			padding: 3%;
+			max-width: 500px;
 		}
 	}
 
@@ -531,10 +560,12 @@ body{
 		text-align: center;
 		line-height: 1.5;
 		margin-bottom: 33%;
+		place-self: end;
 
 		@include mixins.landscape{
 			grid-column: 1/3;
 			padding: 3%;
+			max-width: 500px;
 		}
 	}
 }
@@ -581,6 +612,7 @@ body{
 		position: absolute;
   		top: 0; left: 0;
   		width: 100%; height: 100%;
+		max-height: 665px;
 		object-position: top;
 		object-fit: cover;
 		filter: brightness(0.2);
@@ -604,7 +636,7 @@ body{
 		}
 
 		@include mixins.landscape{
-			object-position: 20%;
+			object-position: 20% 25%;
 		}
 
 		&:hover{
@@ -646,4 +678,15 @@ body{
 
 .hidden{
 	display: none;
+}
+
+.dimmer{
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	background: black;
+	opacity: 0.5;
+	left: 0;
+	top: 0;
 }

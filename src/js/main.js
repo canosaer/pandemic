@@ -13,6 +13,9 @@ class MenuToggle{
         this.siteNavigation = elements.siteNavigation
         this.siteNavigationList = elements.siteNavigationList
         this.toggleLines = elements.toggleLines
+
+        
+
         this.setupListeners()
     }
 

@@ -804,26 +804,12 @@ body {
   padding-bottom: 20%;
   position: relative;
   transition: 200ms width ease-in-out, 200ms height ease-in-out;
-}
-.gallery__item:hover {
-  height: 35rem;
-}
-@media (min-width: 768px) {
-  .gallery__item:hover {
-    width: 80%;
-    height: 19rem;
-  }
-  .gallery__item:hover ~ div {
-    width: 5%;
-  }
+  width: 100%;
 }
 @media (min-width: 768px) {
   .gallery__item {
-    width: 5%;
+    width: 20%;
     padding-bottom: 42%;
-  }
-  .gallery__item_5 {
-    width: 80%;
   }
 }
 .gallery__image {

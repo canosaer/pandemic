@@ -583,28 +583,25 @@ body{
   		padding-bottom: 20%;
   		position: relative;
 		transition: 200ms width ease-in-out, 200ms height ease-in-out;
+		width: 100%;
 
-		&:hover{
-			height: 35rem;
+		// &:hover{
+		// 	height: 35rem;
 			
 
-			@include mixins.landscape{
-				width: 80%;
-				height: 19rem;
+		// 	@include mixins.landscape{
+		// 		width: 80%;
+		// 		height: 19rem;
 
-				& ~ div{
-					width: 5%;
-				}
-			}
-		}
+		// 		& ~ div{
+		// 			width: 5%;
+		// 		}
+		// 	}
+		// }
 
 		@include mixins.landscape{
-			width: 5%;
+			width: 20%;
 			padding-bottom: 42%;
-
-			&_5{
-				width: 80%;
-			}
 		}
 	}
 
